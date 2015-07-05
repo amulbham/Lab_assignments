@@ -1,0 +1,26 @@
+/* 
+ * File:   main.cpp
+ * Author: Amul Bham
+ * Purpose: To determine the excess amount of money spent on Military Budget
+ *
+ * Created on June 23, 2015, 1:36 PM
+ */
+
+#include <iostream>
+
+using namespace std;
+
+
+
+int main(int argc, char** argv) {
+    //Declare the variables first, the federal budget and the military budget
+float fedb=3.9e12; //The federal budget
+float milb=.598e12; //The military budget
+//Determine the % of the military budget by deviding milb/fedb, declare a new variable pme to determine the %
+float pme=milb/fedb;
+//ans is your final after multiplying by 100
+float ans=pme*100;
+cout<<ans<<"%"<<endl;
+
+    return 0;
+}
