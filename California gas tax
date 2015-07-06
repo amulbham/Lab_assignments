@@ -1,0 +1,63 @@
+/* 
+ * File:   main.cpp
+ * Author: Amul Bham
+ * Purpose: To Determine the amount of taxes paid per Gallon in CA
+ * Created on June 24, 2015, 1:03 PM
+ */
+
+#include<iostream>
+
+using namespace std;
+
+//User Libraries
+
+//Global Libraries
+
+//
+
+int main(int argc, char** argv) {
+    //Declare Variables
+         float pGas; //Price of gas per gallon ($) (Input)
+     
+         float ftax; //federal tax paid per gallon (cents)
+    
+         float cEtax;//California excise tax paid per gallon (cents)
+    
+         float cStax; //California Sales tax (%)
+    
+         float bPrice; //base price of gas after cEtax and ftax are taken out
+         
+         float tpaid; //total amount of sales tax after other taxes are taken out
+         
+         float fbtax; //Total amount of taxes paid per gallon 
+         
+    //Give variables values
+    
+        ftax=0.18; //amount added per gallon of gas                   
+                
+        cEtax=0.38;
+        
+        cStax=.08;//California sales tax (changed to decimal form)
+        
+   //Ask the user how he paid per gallon 
+        
+        cout<<"Enter Price per gallon paid at pump "<<endl;    
+        
+        cin>>pGas; //User inputs the amount they pay per gallon 
+
+   //Calculate the Base Price, CA sales tax, and Total taxes paid
+        
+        bPrice=pGas-(ftax+cEtax); //Determines the base price per gallon
+        
+        tpaid=bPrice*cStax; //Determines the amount of sales tax paid 
+        
+        fbtax=tpaid+ftax+cEtax;//Adds the three separate taxes paid
+        
+   //Output the results
+        
+        cout<<"The total amount of taxes paid is "<<fbtax<<" cents per gallon"<<endl;
+       
+        
+    return 0;
+}
+
